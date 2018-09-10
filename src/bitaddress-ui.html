@@ -1,0 +1,854 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Gravium - Ecosystem Evolution of the Flat World" />
+  <!-- <title>Gravium Wallet Generator</title> -->
+
+  <meta name="og:title" content="Gravium Wallet Generator" data-vue-meta="true">
+  <meta name="og:description" content="Gravium - Ecosystem Evolution of the Flat World" data-vue-meta="true">
+  <meta name="og:image" content="https://i.imgur.com/qBAuBs1.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./favicon/favicon.ico">
+  <link href="https://l.allcdn.org/remark/v4.1/bootstrap.min.css" rel="stylesheet">
+  <link href="https://l.allcdn.org/remark/v4.1/bootstrap-extend.min.css" rel="stylesheet">
+  <link href="https://l.allcdn.org/fa/v5.0.10/css/fontawesome-all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://l.allcdn.org/remark/v4.1/skins/green.min.css">
+
+  <title>Gravium Wallet Generator</title>
+
+  <script type="text/javascript">
+    //array.map.js
+  </script>
+  <script type="text/javascript">
+    //cryptojs.js
+  </script>
+  <script type="text/javascript">
+    //cryptojs.sha256.js
+  </script>
+  <script type="text/javascript">
+    //cryptojs.pbkdf2.js
+  </script>
+  <script type="text/javascript">
+    //cryptojs.hmac.js
+  </script>
+  <script type="text/javascript">
+    //cryptojs.aes.js
+  </script>
+  <script type="text/javascript">
+    //cryptojs.blockmodes.js
+  </script>
+  <script type="text/javascript">
+    //cryptojs.ripemd160.js
+  </script>
+  <script type="text/javascript">
+    //securerandom.js
+  </script>
+  <script type="text/javascript">
+    //ellipticcurve.js
+  </script>
+  <script type="text/javascript">
+    //secrets.js
+  </script>
+  <script type="text/javascript">
+    //biginteger.js
+  </script>
+  <script type="text/javascript">
+    //qrcode.js
+  </script>
+  <script type="text/javascript">
+    //bitcoinjs-lib.js
+  </script>
+  <script type="text/javascript">
+    //bitcoinjs-lib.base58.js
+  </script>
+  <script type="text/javascript">
+    //bitcoinjs-lib.address.js
+  </script>
+  <script type="text/javascript">
+    //bitcoinjs-lib.ecdsa.js
+  </script>
+  <script type="text/javascript">
+    //bitcoinjs-lib.eckey.js
+  </script>
+  <script type="text/javascript">
+    //bitcoinjs-lib.util.js
+  </script>
+  <script type="text/javascript">
+    //crypto-scrypt.js
+  </script>
+  <style type="text/css">
+    //main.css
+  </style>
+</head>
+
+<body onclick="SecureRandom.seedTime();" onmousemove="ninja.seeder.seed(event);">
+  <div id="busyblock"></div>
+  <div id="main">
+    <div id="culturemenu">
+      <div class="culturemenurow">
+        <span>
+          <a href="?culture=en" id="cultureen" class="selected">English</a>
+        </span> |
+        <span>
+          <a href="?culture=es" id="culturees">Español</a>
+        </span> |
+        <span>
+          <a href="?culture=fr" id="culturefr">Français</a>
+        </span> |
+        <span>
+          <a href="?culture=el" id="cultureel">ελληνικά</a>
+        </span> |
+        <span>
+          <a href="?culture=it" id="cultureit">italiano</a>
+        </span> |
+        <span>
+          <a href="?culture=de" id="culturede">Deutsch</a>
+        </span>
+      </div>
+      <div class="culturemenurow">
+        <span>
+          <a href="?culture=cs" id="culturecs">Česky</a>
+        </span> |
+        <span>
+          <a href="?culture=hu" id="culturehu">Magyar</a>
+        </span> |
+        <span>
+          <a href="?culture=jp" id="culturejp">日本語</a>
+        </span> |
+        <span>
+          <a href="?culture=zh-cn" id="culturezh-cn">简体中文</a>
+        </span> |
+        <span>
+          <a href="?culture=ru" id="cultureru">Русский</a>
+        </span> |
+        <span>
+          <a href="?culture=pt-br" id="culturept-br">português</a>
+        </span>
+      </div>
+    </div>
+    <nav role="navigation" class="navbar navbar-inverse nav-bg-gk navbar-fixed-top">
+      <div class="container">
+        <div id="example-navbar-toolbar-1" class="collapse navbar-collapse navbar-collapse-toolbar">
+          <ul class="nav navbar-toolbar" style=" clear:both; justify-content: center">
+            <li class="nav-item">
+              <a href="?culture=en" id="cultureen" class="selected nav-link">English</a>
+            </li>
+            <li class="nav-item">
+              <a href="?culture=es" id="culturees" class="nav-link">Español</a>
+            </li>
+            <li class="nav-item">
+              <a href="?culture=fr" id="culturefr" class="nav-link">Français</a>
+            </li>
+            <li class="nav-item">
+              <a href="?culture=el" id="cultureel" class="nav-link">ελληνικά</a>
+            </li>
+            <li class="nav-item">
+              <a href="?culture=it" id="cultureit" class="nav-link">italiano</a>
+            </li>
+            <li class="nav-item">
+              <a href="?culture=de" id="culturede" class="nav-link">Deutsch</a>
+            </li>
+            <li class="nav-item">
+              <a href="?culture=cs" id="culturecs" class="nav-link">Česky</a>
+            </li>
+            <li class="nav-item">
+              <a href="?culture=hu" id="culturehu" class="nav-link">Magyar</a>
+            </li>
+            <li class="nav-item">
+              <a href="?culture=jp" id="culturejp" class="nav-link">日本語</a>
+            </li>
+            <li class="nav-item">
+              <a href="?culture=zh-cn" id="culturezh-cn" class="nav-link">简体中文</a>
+            </li>
+            <li class="nav-item">
+              <a href="?culture=ru" id="cultureru" class="nav-link">Русский</a>
+            </li>
+            <li class="nav-item">
+              <a href="?culture=pt-br" id="culturept-br" class="nav-link">português</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+    </nav>
+    <div id="container" style="white-space:nowrap">
+      <div id="image" style="display:inline;">
+        <img alt="Gravium Logo" title="Gravium Wallet Generator" id="logo" src="favicon/logo.png" />
+      </div>
+      <div id="title-texts" style="font-size: 32px; white-space:nowrap;">
+        Gravium PaperWallet Generator
+      </div>
+    </div>​
+    <div id="tagline">Open Source JavaScript Client-Side Gravium Wallet Generator</div>
+    <div id="seedpoolarea">
+      <textarea rows="16" cols="62" id="seedpool"></textarea>
+    </div>
+    <div id="testnet"></div>
+    <ul class="menu" id="menu">
+      <li class="tab" id="singlewallet" onclick="ninja.tab.select(this);">Single Wallet
+        <li class="tab" id="paperwallet" onclick="ninja.tab.select(this);">Paper Wallet
+          <li class="tab" id="bulkwallet" onclick="ninja.tab.select(this);">Bulk Wallet
+            <li class="tab" id="brainwallet" onclick="ninja.tab.select(this);">Brain Wallet
+              <li class="tab" id="vanitywallet" onclick="ninja.tab.select(this);">Vanity Wallet
+                <li class="tab" id="splitwallet" onclick="ninja.tab.select(this);">Split Wallet
+                  <li class="tab" id="detailwallet" onclick="ninja.tab.select(this);">Wallet Details
+    </ul>
+
+    <div id="generate">
+      <span id="generatelabelbitcoinaddress">Generating Gravium Address...</span>
+      <br />
+      <span id="generatelabelmovemouse">MOVE your mouse around to add some extra randomness... </span>
+      <span id="mousemovelimit"></span>
+      <br />
+      <form class="form-inline">
+        <span id="generatelabelkeypress">OR type some random characters into this textbox</span>
+        <input type="text" class="form-control" id="generatekeyinput" onkeydown="ninja.seeder.seedKeyPress(event);" />
+      </form>
+      <br />
+      <div id="seedpooldisplay"></div>
+    </div>
+
+    <div id="wallets">
+      <div id="singlearea" class="walletarea">
+        <div class="commands">
+          <div id="singlecommands" class="row">
+            <span>
+              <input type="button" class="btn btn-info" id="newaddress" value="Generate New Address" onclick="ninja.wallets.singlewallet.generateNewAddressAndKey();"
+              />
+            </span>
+            <span class="print">
+              <input type="button" class="btn btn-info" name="print" value="Print" id="singleprint" onclick="window.print();" />
+            </span>
+          </div>
+        </div>
+        <div class="body">
+          <div id="keyarea" class="keyarea">
+            <div class="public">
+              <div class="pubaddress">
+                <span class="label" id="singlelabelbitcoinaddress">Gravium Address</span>
+              </div>
+              <div id="qrcode_public" class="qrcode_public"></div>
+              <div class="pubaddress">
+                <span class="output" id="btcaddress"></span>
+              </div>
+              <div id="singleshare">SHARE</div>
+            </div>
+            <div class="private">
+              <div class="privwif">
+                <span class="label" id="singlelabelprivatekey">Private Key (Wallet Import Format)</span>
+              </div>
+              <div id="qrcode_private" class="qrcode_private"></div>
+              <div class="privwif">
+                <span class="output" id="btcprivwif"></span>
+              </div>
+              <div id="singlesecret">SECRET</div>
+            </div>
+          </div>
+
+          <div id="singlesafety">
+            <p id="singletip1">
+              <b>A Gravium wallet</b> is as simple as a single pairing of a Gravium address with its corresponding Gravium private
+              key. Such a wallet has been generated for you in your web browser and is displayed above.</p>
+            <p id="singletip2">
+              <b>To safeguard this wallet</b> you must print or otherwise record the Gravium address and private key. It is
+              important to make a backup copy of the private key and store it in a safe location. This site does not have
+              knowledge of your private key. If you are familiar with PGP you can download this all-in-one HTML page and
+              check that you have an authentic version from the author of this site by matching the SHA256 hash of this HTML
+              with the SHA256 hash available in the signed version history document linked on the footer of this site. If
+              you leave/refresh the site or press the "Generate New Address" button then a new private key will be generated
+              and the previously displayed private key will not be retrievable. Your Gravium private key should be kept a
+              secret. Whomever you share the private key with has access to spend all the Gravium associated with that address.
+              If you print your wallet then store it in a zip lock bag to keep it safe from water. Treat a paper wallet like
+              cash.
+            </p>
+            <p id="singletip3">
+              <b>Add funds</b> to this wallet by instructing others to send Gravium to your Gravium address.</p>
+            <p id="singletip4">
+              <b>Check your balance</b> by going to explorer.gravium.io and entering your Gravium address.</p>
+            <p id="singletip5">
+              <b>Spend your Gravium</b> by importing your private key to the p2p client wallet. Keep in mind when you import
+              your single key to a Gravium p2p client and spend funds your key will be bundled with other private keys in
+              the p2p client wallet. When you perform a transaction your change will be sent to another Gravium address within
+              the p2p client wallet. You must then backup the p2p client wallet and keep it safe as your remaining Gravium
+              will be stored there. Satoshi advised that one should never delete a wallet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="paperarea">
+        <div class="commands">
+          <div id="papercommands" class="row">
+            <span class="form-inline col-sm-2">
+              <label id="paperlabelhideart" for="paperart">Hide Art?</label>
+              <input type="checkbox" id="paperart" onchange="ninja.wallets.paperwallet.toggleArt(this);" />
+            </span>
+            <span class="form-inline col-sm-3">
+              <label id="paperlabeladdressestogenerate" for="paperlimit">Addresses to generate:</label>
+              <input type="text" class="form-control" id="paperlimit" />
+            </span>
+            <span>
+              <input type="button" class="btn btn-info" id="papergenerate" value="Generate" onclick="ninja.wallets.paperwallet.build(document.getElementById('paperlimit').value * 1, document.getElementById('paperlimitperpage').value * 1, !document.getElementById('paperart').checked, document.getElementById('paperpassphrase').value);"
+              />
+            </span>
+            <span class="print">
+              <input type="button" class="btn btn-info" name="print" value="Print" id="paperprint" onclick="window.print();" />
+            </span>
+          </div>
+          <div id="paperadvancedcommands" class="row extra">
+            <span class="form-inline col-sm-2">
+              <label id="paperlabelencrypt" for="paperencrypt">BIP38 Encrypt?</label>
+              <input type="checkbox" id="paperencrypt" onchange="ninja.wallets.paperwallet.toggleEncrypt(this);" />
+            </span>
+            <span class="form-inline ">
+              <label id="paperlabelBIPpassphrase" for="paperpassphrase">Passphrase:</label>
+              <input type="text" class="form-control" id="paperpassphrase" />
+            </span>
+            <span class="form-inline">
+              <label id="paperlabeladdressesperpage" for="paperlimitperpage">Addresses per page:</label>
+              <input type="text" class="form-control" id="paperlimitperpage" />
+            </span>
+          </div>
+        </div>
+        <div id="paperkeyarea"></div>
+      </div>
+
+      <div id="bulkarea" class="walletarea">
+        <div class="commands">
+          <div id="bulkcommands" class="row">
+            <span class="form-inline">
+              <label id="bulklabelstartindex" for="bulkstartindex">Start index:</label>
+              <input type="text" class="form-control" id="bulkstartindex" value="1" />
+            </span>
+            <span class="form-inline">
+              <label id="bulklabelrowstogenerate" for="bulklimit">Rows to generate:</label>
+              <input type="text" class="form-control" id="bulklimit" value="3" />
+            </span>
+            <span class="form-inline">
+              <label id="bulklabelcompressed" for="bulkcompressed">Compressed addresses?</label>
+              <input type="checkbox" id="bulkcompressed" />
+            </span>
+            <span>
+              <input type="button" class="btn btn-info" id="bulkgenerate" value="Generate" onclick="ninja.wallets.bulkwallet.buildCSV(document.getElementById('bulklimit').value * 1, document.getElementById('bulkstartindex').value * 1, document.getElementById('bulkcompressed').checked);"
+              /> </span>
+            <span class="print">
+              <input type="button" class="btn btn-info" name="print" id="bulkprint" value="Print" onclick="window.print();" />
+            </span>
+          </div>
+        </div>
+        <div class="body">
+          <span class="label" id="bulklabelcsv">Comma Separated Values:</span>
+          <span class="format" id="bulklabelformat">Index,Address,Private Key (WIF)</span>
+          <textarea rows="20" cols="88" id="bulktextarea"></textarea>
+        </div>
+        <div class="faqs">
+          <div id="bulkfaq1" class="faq">
+            <div id="bulkq1" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(1);">
+              <span id="bulklabelq1">Why should I use a Bulk Wallet to accept Gravium on my website?</span>
+              <div id="bulke1" class="more"></div>
+            </div>
+            <div id="bulka1" class="answer">The traditional approach to accepting Gravium on your website requires that you install the official Gravium
+              client daemon ("graviumd"). Many website hosting packages don't support installing the Gravium daemon. Also,
+              running the Gravium daemon on your web server means your private keys are hosted on the server and could get
+              stolen if your web server is hacked. When using a Bulk Wallet you can upload only the Gravium addresses and
+              not the private keys to your web server. Then you don't have to worry about your Gravium wallet being stolen
+              if your web server is hacked.
+            </div>
+          </div>
+          <div id="bulkfaq2" class="faq">
+            <div id="bulkq2" class="question" onclick="ninja.wallets.bulkwallet.openCloseFaq(2);">
+              <span id="bulklabelq2">How do I use a Bulk Wallet to accept Gravium on my website?</span>
+              <div id="bulke2" class="more"></div>
+            </div>
+            <div id="bulka2" class="answer">
+              <ol>
+                <li id="bulklabela2li1">Use the Bulk Wallet tab to pre-generate a large number of Gravium addresses (10,000+). Copy and paste the
+                  generated comma separated values (CSV) list to a secure text file on your computer. Backup the file you
+                  just created to a secure location.</li>
+                <li id="bulklabela2li2">Import the Gravium addresses into a database table on your web server. (Don't put the wallet/private keys
+                  on your web server, otherwise you risk hackers stealing your coins. Just the Gravium addresses as they
+                  will be shown to customers.)
+                </li>
+                <li id="bulklabela2li3">Provide an option on your website's shopping cart for your customer to pay in Gravium. When the customer
+                  chooses to pay in Gravium you will then display one of the addresses from your database to the customer
+                  as his "payment address" and save it with his shopping cart order.</li>
+                <li id="bulklabela2li4">You now need to be notified when the payment arrives. Google "Gravium payment notification" and subscribe
+                  to at least one Gravium payment notification service. There are various services that will notify you via
+                  Web Services, API, SMS, Email, etc. Once you receive this notification, which could be programmatically
+                  automated, you can process the customer's order. To manually check if a payment has arrived you can use
+                  Block Explorer. Replace THEADDRESSGOESHERE with the Gravium address you are checking. It could take between
+                  10 minutes to one hour for the transaction to be confirmed.
+                  <br />http://explorer.gravium.io/address/THEADDRESSGOESHERE
+                  <br />
+                  <br />You should see the transaction there within 30 seconds.</li>
+                <li id="bulklabela2li5">Gravium will safely pile up on the block chain. Use the original wallet file you generated in step 1 to spend
+                  them.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="brainarea" class="walletarea">
+        <div id="braincommands" class="commands">
+          <div class="form-inline">
+            <span id="brainlabelenterpassphrase" class="label col-sm-2">
+              <label for="brainpassphrase">Enter Passphrase: </label>
+            </span>
+            <input tabindex="1" type="password" class="form-control" id="brainpassphrase" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.brainwallet.view();"
+            />
+            <span class="form-inline">
+              <label id="brainlabelshow" for="brainpassphraseshow">Show?</label>
+              <input type="checkbox" id="brainpassphraseshow" onchange="ninja.wallets.brainwallet.showToggle(this);" />
+            </span>
+            <span class="print">
+              <input type="button" class="btn btn-info" name="print" id="brainprint" value="Print" onclick="window.print();" />
+            </span>
+          </div>
+          <div class="form-inline extra">
+            <span class="label col-sm-2" id="brainlabelconfirm">
+              <label for="brainpassphraseconfirm">Confirm Passphrase: </label>
+            </span>
+            <input tabindex="2" type="password" class="form-control" id="brainpassphraseconfirm" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.brainwallet.view();"
+            />
+            <span>
+              <input tabindex="3" type="button" class="btn btn-info" id="brainview" value="View" onclick="ninja.wallets.brainwallet.view();"
+              />
+            </span>
+            <span id="brainalgorithm" class="notes right">Algorithm: SHA256(passphrase)</span>
+          </div>
+          <div class="row extra">
+            <span id="brainwarning"></span>
+          </div>
+        </div>
+        <div id="brainkeyarea" class="keyarea">
+          <div class="public">
+            <div id="brainqrcodepublic" class="qrcode_public"></div>
+            <div class="pubaddress">
+              <span class="label" id="brainlabelbitcoinaddress">Gravium Address:</span>
+              <span class="output" id="brainbtcaddress"></span>
+            </div>
+          </div>
+          <div class="private">
+            <div id="brainqrcodeprivate" class="qrcode_private"></div>
+            <div class="privwif">
+              <span class="label" id="brainlabelprivatekey">Private Key (Wallet Import Format):</span>
+              <span class="output" id="brainbtcprivwif"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="vanityarea" class="walletarea">
+        <div id="vanitystep1label" class="commands expandable" onclick="ninja.wallets.vanitywallet.openCloseStep(1);">
+          <span>
+            <label id="vanitylabelstep1">Step 1 - Generate your "Step1 Key Pair"</label>
+            <input type="button" class="btn btn-info" id="vanitynewkeypair" value="Generate" onclick="ninja.wallets.vanitywallet.generateKeyPair();"
+            />
+          </span>
+          <div id="vanitystep1icon" class="more"></div>
+        </div>
+        <div id="vanitystep1area">
+          <div>
+            <span class="label" id="vanitylabelstep1publickey">Step 1 Public Key:</span>
+            <div class="output pubkeyhex" id="vanitypubkey"></div>
+            <br />
+            <div class="notes" id="vanitylabelstep1pubnotes">Copy and paste the above into the Your-Part-Public-Key field in the Vanity Pool Website.</div>
+          </div>
+          <div>
+            <span class="label" id="vanitylabelstep1privatekey">Step 1 Private Key:</span>
+            <span class="output" id="vanityprivatekey"></span>
+            <br />
+            <div class="notes" id="vanitylabelstep1privnotes">Copy and paste the above Private Key field into a text file. Ideally save to an encrypted drive. You will need
+              this to retrieve the Gravium Private Key once the Pool has found your prefix.</div>
+          </div>
+        </div>
+        <div id="vanitystep2label" class="expandable" onclick="ninja.wallets.vanitywallet.openCloseStep(2);">
+          <span id="vanitylabelstep2calculateyourvanitywallet">Step 2 - Calculate your Vanity Wallet</span>
+          <div id="vanitystep2icon" class="more"></div>
+        </div>
+        <div id="vanitystep2inputs">
+          <div>
+            <span id="vanitylabelenteryourpart">Enter Your Part Private Key (generated in Step 1 above and previously saved):</span>
+            <br />
+            <span class="notes" id="vanitylabelnote1">[NOTE: this input box can accept a public key or private key]</span>
+          </div>
+          <div>
+            <textarea id="vanityinput1" rows="2" cols="90" onfocus="this.select();"></textarea>
+          </div>
+          <div>
+            <span id="vanitylabelenteryourpoolpart">Enter Pool Part Private Key (from Vanity Pool):</span>
+            <br />
+            <span class="notes" id="vanitylabelnote2">[NOTE: this input box can accept a public key or private key]</span>
+          </div>
+          <div>
+            <textarea id="vanityinput2" rows="2" cols="90" onfocus="this.select();"></textarea>
+          </div>
+          <div>
+            <label for="vanityradioadd" id="vanitylabelradioadd">Add</label>
+            <input type="radio" id="vanityradioadd" name="vanityradio" value="add" checked />
+            <label for="vanityradiomultiply" id="vanitylabelradiomultiply">Multiply</label>
+            <input type="radio" id="vanityradiomultiply" name="vanityradio" value="multiply" />
+          </div>
+          <div>
+            <input type="button" class="btn btn-info" id="vanitycalc" value="Calculate Vanity Wallet" onclick="ninja.wallets.vanitywallet.addKeys();"
+            />
+          </div>
+        </div>
+        <div id="vanitystep2area">
+          <div>
+            <span class="label" id="vanitylabelbitcoinaddress">Vanity Gravium Address:</span>
+            <span class="output" id="vanityaddress"></span>
+            <br />
+            <div class="notes" id="vanitylabelnotesbitcoinaddress">The above is your new address that should include your required prefix.</div>
+          </div>
+
+          <div>
+            <span class="label" id="vanitylabelpublickeyhex">Vanity Public Key (HEX):</span>
+            <span class="output pubkeyhex" id="vanitypublickeyhex"></span>
+            <br />
+            <div class="notes" id="vanitylabelnotespublickeyhex">The above is the Public Key in hexadecimal format. </div>
+          </div>
+
+          <div>
+            <span class="label" id="vanitylabelprivatekey">Vanity Private Key (WIF):</span>
+            <span class="output" id="vanityprivatekeywif"></span>
+            <br />
+            <div class="notes" id="vanitylabelnotesprivatekey">The above is the Private Key to load into your wallet. </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="splitarea" class="walletarea">
+        <div id="splitcommands" class="commands " class="form-inline">
+          <div class="form-inline">
+            <label id="splitlabelthreshold">Minimum share threshold needed to combine</label>
+            <input type="text" class="form-control" id="splitthreshold" value="2" size="4" />
+          </div>
+          <br/>
+          <div class="form-inline">
+            <label id="splitlabelshares">Number of shares</label>
+            <input type="text" class="form-control" id="splitshares" value="3" size="4" />
+            <span>
+              <input type="button" class="btn btn-info" id="splitview" value="Generate" onclick="ninja.wallets.splitwallet.splitKey();">
+            </span>
+            <div id="splitstep1icon" class="more " onclick="ninja.wallets.splitwallet.openCloseStep(1);"></div>
+          </div>
+
+        </div>
+        <div id="splitstep1area"></div>
+
+        <div id="combinecommands" class="left commands">
+          <span>
+            <label id="combinelabelentershares">Enter Available Shares (whitespace separated)</label>
+            <br/>
+            <textarea id="combineinput" cols="60" rows="10"></textarea>
+            <br/>
+          </span>
+          <span>
+            <input type="button" class="btn btn-info" id="combineview" value="Combine Shares" onclick="ninja.wallets.splitwallet.combineShares();">
+          </span>
+        </div>
+        <div id="splitstep2area">
+          <div id="combineoutput">
+            <label id="combinelabelprivatekey">Combined Private Key</label>
+            <div id="combinedprivatekey" class="output"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="detailarea" class="walletarea">
+        <div id="detailcommands" class="commands">
+          <div class="form-inline">
+            <span>
+              <label id="detaillabelenterprivatekey" for="detailprivkey">Enter Private Key</label>
+            </span>
+            <input type="text" class="form-control" id="detailprivkey" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.detailwallet.viewDetails();"
+            />
+            <span>
+              <input type="button" class="btn btn-info" class="button" id="detailview" value="View Details" onclick="ninja.wallets.detailwallet.viewDetails();"
+              />
+            </span>
+          </div>
+          <div id="detailbip38toggle">
+            <span>
+              <label id="detaillabelencrypt" for="detailencrypt">BIP38 Encrypt?</label>
+              <input type="checkbox" id="detailbip38checkbox" onchange="ninja.wallets.detailwallet.toggleEncrypt(this);" />
+            </span>
+          </div>
+          <div id="detailbip38commands">
+            <span>
+              <label id="detaillabelpassphrase">Enter BIP38 Passphrase</label>
+              <input type="text" class="form-control" id="detailprivkeypassphrase" value="" onfocus="this.select();" onkeypress="if (event.keyCode == 13) ninja.wallets.detailwallet.enterOnPassphrase();"
+              />
+            </span>
+            <span id="detailbip38decryptspan">
+              <input type="button" class="btn btn-info" class="button" id="detailbip38decryptbutton" value="Decrypt BIP38" onclick="ninja.wallets.detailwallet.decryptBip38();"
+              />
+            </span>
+            <span id="detailbip38encryptspan">
+              <input type="button" class="btn btn-info" class="button" id="detailbip38encryptbutton" value="Encrypt BIP38" onclick="ninja.wallets.detailwallet.encryptBip38();"
+              />
+            </span>
+          </div>
+          <span class="print">
+            <input type="button" class="btn btn-info" class="button" name="print" id="detailprint" value="Print" onclick="window.print();"
+            />
+          </span>
+          <div class="row extra">
+            <span>
+              <label id="detailkeyformats">Key Formats: WIF, WIFC, HEX, B64, B6, MINI, BIP38</label>
+            </span>
+          </div>
+        </div>
+        <div id="detailkeyarea">
+          <div class="notes">
+            <span id="detaillabelnote1">Your Gravium Private Key is a unique secret number that only you know. It can be encoded in a number of different
+              formats. Below we show the Gravium Address and Public Key that corresponds to your Private Key as well as your
+              Private Key in the most popular encoding formats (WIF, WIFC, HEX, B64).</span>
+            <br />
+            <br />
+            <span id="detaillabelnote2">Gravium stores public keys in compressed format. The client now also supports import and export of private keys
+              with importprivkey/dumpprivkey. The format of the exported private key is determined by whether the address
+              was generated in an old or new wallet.</span>
+          </div>
+          <div class="pubqr">
+            <div class="item">
+              <span class="label" id="detaillabelbitcoinaddress">Gravium Address</span>
+              <div id="detailqrcodepublic" class="qrcode_public"></div>
+              <span class="output" id="detailaddress"></span>
+            </div>
+            <div class="item right">
+              <span class="label" id="detaillabelbitcoinaddresscomp">Gravium Address Compressed</span>
+              <div id="detailqrcodepubliccomp" class="qrcode_public"></div>
+              <span class="output" id="detailaddresscomp"></span>
+            </div>
+          </div>
+          <br />
+          <br />
+          <div class="item clear">
+            <span class="label" id="detaillabelpublickey">Public Key (130 characters [0-9A-F]):</span>
+            <span class="output pubkeyhex" id="detailpubkey"></span>
+          </div>
+          <div class="item">
+            <span class="label" id="detaillabelpublickeycomp">Public Key (compressed, 66 characters [0-9A-F]):</span>
+            <span class="output" id="detailpubkeycomp"></span>
+          </div>
+          <hr />
+          <div class="privqr">
+            <div class="item">
+              <span class="label">
+                <span id="detaillabelprivwif">Private Key WIF
+                  <br />51 characters base58, starts with a</span>
+                <span id="detailwifprefix">'7'</span>
+              </span>
+              <div id="detailqrcodeprivate" class="qrcode_private"></div>
+              <span class="output" id="detailprivwif"></span>
+            </div>
+            <div class="item right">
+              <span class="label">
+                <span id="detaillabelprivwifcomp">Private Key WIF Compressed
+                  <br />52 characters base58, starts with a</span>
+                <span id="detailcompwifprefix">'X'</span>
+              </span>
+              <div id="detailqrcodeprivatecomp" class="qrcode_private"></div>
+              <span class="output" id="detailprivwifcomp"></span>
+            </div>
+          </div>
+          <br />
+          <br />
+          <div class="item clear">
+            <span class="label" id="detaillabelprivhex">Private Key Hexadecimal Format (64 characters [0-9A-F]):</span>
+            <span class="output" id="detailprivhex"></span>
+          </div>
+          <div class="item">
+            <span class="label" id="detaillabelprivb64">Private Key Base64 (44 characters):</span>
+            <span class="output" id="detailprivb64"></span>
+          </div>
+          <div class="item" style="display: none;" id="detailmini">
+            <span class="label" id="detaillabelprivmini">Private Key Mini Format (22, 26 or 30 characters, starts with an 'S'):</span>
+            <span class="output" id="detailprivmini"></span>
+          </div>
+          <div class="item" style="display: none;" id="detailb6">
+            <span class="label" id="detaillabelprivb6">Private Key Base6 Format (99 characters [0-5]):</span>
+            <span class="output" id="detailprivb6"></span>
+          </div>
+          <div class="item" style="display: none;" id="detailbip38">
+            <span class="label" id="detaillabelprivbip38">Private Key BIP38 Format (58 characters base58, starts with '6P'):</span>
+            <div id="detailqrcodeprivatebip38" class="qrcode_private"></div>
+            <span class="output" id="detailprivbip38"></span>
+          </div>
+        </div>
+        <div class="faqs">
+          <div id="detailfaq1" class="faq">
+            <div id="detailq1" class="question" onclick="ninja.wallets.detailwallet.openCloseFaq(1);">
+              <span id="detaillabelq1">How do I make a wallet using dice? What is B6?</span>
+              <div id="detaile1" class="more"></div>
+            </div>
+            <div id="detaila1" class="answer">An important part of creating a Gravium wallet is ensuring the random numbers used to create the wallet are truly
+              random. Physical randomness is better than computer generated pseudo-randomness. The easiest way to generate
+              physical randomness is with dice. To create a Gravium private key you only need one six sided die which you
+              roll 99 times. Stopping each time to record the value of the die. When recording the values follow these rules:
+              1=1, 2=2, 3=3, 4=4, 5=5, 6=0. By doing this you are recording the big random number, your private key, in B6
+              or base 6 format. You can then enter the 99 character base 6 private key into the text field above and click
+              View Details. You will then see the Gravium address associated with your private key. You should also make
+              note of your private key in WIF format since it is more widely used.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="footer" class="footer">
+      <div class="tooltips">
+        <div class="tooltip" id="statuscryptogood">
+          <span class="statusgood" id="statuslabelcryptogood">&#10004; Good!</span>
+          <span id="statuslabelcryptogood1">Your browser can generate cryptographically random keys using window.crypto.getRandomValues</span>
+          <br />
+          <br />
+          <input type="button" class="btn btn-info" value="OK" class="button" id="statusokcryptogood" onclick="document.getElementById('statuscryptogood').style.display = 'none';"
+          />
+        </div>
+        <div class="tooltip" id="statuscryptobad">
+          <span class="statusbad" id="statuslabelcryptobad">&times; Oh no!</span>
+          <span id="statuslabelcryptobad1">Your browser does NOT support window.crypto.getRandomValues. You should use a more modern browser with this generator
+            to increase the security of the keys generated.</span>
+          <br />
+          <br />
+          <input type="button" class="btn btn-info" value="OK" class="button" id="statusokcryptobad" onclick="document.getElementById('statuscryptobad').style.display = 'none';"
+          />
+        </div>
+        <div class="tooltip" id="statusunittestsgood">
+          <span class="statusgood" id="statuslabelunittestsgood">&#10004; Good!</span>
+          <span id="statuslabelunittestsgood1">All synchronous unit tests passed.</span>
+          <br />
+          <br />
+          <input type="button" class="btn btn-info" value="OK" class="button" id="statusokunittestsgood" onclick="document.getElementById('statusunittestsgood').style.display = 'none';"
+          />
+        </div>
+        <div class="tooltip" id="statusunittestsbad">
+          <span class="statusbad" id="statuslabelunittestsbad">&times; Oh no!</span>
+          <span id="statuslabelunittestsbad1">Some synchronous unit tests DID NOT pass. You should find another browser to use with this generator.</span>
+          <br />
+          <br />
+          <input type="button" class="btn btn-info" value="OK" class="button" id="statusokunittestsbad" onclick="document.getElementById('statusunittestsbad').style.display = 'none';"
+          />
+        </div>
+        <div class="tooltip" id="statusprotocolgood">
+          <span class="statusgood" id="statuslabelprotocolgood">&#10004; Good!</span>
+          <span id="statuslabelprotocolgood1">You are running this generator from your local computer.
+            <br />Tip: Double check you are offline by trying </span>
+          <a href="http://www.google.com" target="_blank">www.google.com</a>
+          <br />
+          <br />
+          <input type="button" class="btn btn-info" value="OK" class="button" id="statusokprotocolgood" onclick="document.getElementById('statusprotocolgood').style.display = 'none';"
+          />
+        </div>
+        <div class="tooltip" id="statusprotocolbad">
+          <span class="statuswarn" id="statuslabelprotocolbad">&#9888; Think twice!</span>
+          <span id="statuslabelprotocolbad1">You appear to be running this generator online from a live website. For valuable wallets it is recommended to</span>
+          <a id="statuslabelprotocolbad2" href="https://github.com/Gravium/paper.gravium.io/archive/v//version.zip">download</a>
+          <span id="statuslabelprotocolbad3">the zip file from GitHub and run this generator offline as a local html file.</span>
+          <br />
+          <br />
+          <input type="button" class="btn btn-info" value="OK" class="button" id="statusokprotocolbad" onclick="document.getElementById('statusprotocolbad').style.display = 'none';"
+          />
+        </div>
+        <div class="tooltip" id="statuskeypoolgood">
+          <span id="statuslabelkeypool1">This is a log of all the Gravium Addresses and Private Keys you generated during your current session. Reloading
+            the page will create a new session.</span>
+          <textarea rows="20" cols="102" id="keypooltextarea"></textarea>
+
+          <br />
+          <br />
+          <input type="button" class="btn btn-info" value="Refresh" class="button" id="statuskeypoolrefresh" onclick="ninja.status.showKeyPool();"
+          />
+          <input type="button" class="btn btn-info" value="OK" class="button" id="statusokkeypool" onclick="document.getElementById('statuskeypoolgood').style.display = 'none';"
+          />
+        </div>
+      </div>
+
+      <div class="authorbtc">
+        <div>
+          <span class="item">
+            <span class="statusicon" id="statusprotocol" onclick="ninja.status.showProtocol();">...</span>
+            <span class="statusicon" id="statuscrypto" onclick="ninja.status.showCrypto();">...</span>
+            <span class="statusicon" id="statusunittests" onclick="ninja.status.showUnitTests();">...</span>
+            <span class="statusicon" id="statuskeypool" onclick="ninja.status.showKeyPool();">&#8803;</span>
+          </span>
+          <span class="item">
+            <span id="footerlabeldonations">Donations for original project:</span>
+            <b>1NiNja</b>1bUmhSoTXozBRBEtR8LeF9TGbZBN</span>
+          <span class="item" id="footerlabeltranslatedby"></span>
+          <span class="item">
+            <a href="https://github.com/Gravium/paper.gravium.io" target="_blank" id="footerlabelgithub">GitHub Repository</a>
+          </span>
+        </div>
+      </div>
+      <div class="copyright">
+        <span id="footerlabelcopyright1">Copyright bitaddress.org, The Gravium Developers.</span>
+        <span id="footerlabelcopyright2">JavaScript copyrights are included in the source.</span>
+        <span id="footerlabelnowarranty">No warranty.</span>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    //ninja.key.js
+  </script>
+  <script type="text/javascript">
+    //ninja.seeder.js
+  </script>
+  <script type="text/javascript">
+    //ninja.qrcode.js
+  </script>
+  <script type="text/javascript">
+    //ninja.misc.js
+  </script>
+  <script type="text/javascript">
+    //ninja.translator.js
+  </script>
+  <script type="text/javascript">
+    //ninja.singlewallet.js
+  </script>
+  <script type="text/javascript">
+    //ninja.paperwallet.js
+  </script>
+  <script type="text/javascript">
+    //ninja.bulkwallet.js
+  </script>
+  <script type="text/javascript">
+    //ninja.brainwallet.js
+  </script>
+  <script type="text/javascript">
+    //ninja.vanitywallet.js
+  </script>
+  <script type="text/javascript">
+    //ninja.detailwallet.js
+  </script>
+  <script type="text/javascript">
+    //ninja.splitwallet.js
+  </script>
+  <script type="text/javascript">
+    //ninja.unittests.js
+  </script>
+  <script type="text/javascript">
+    //ninja.onload.js
+  </script>
+</body>
+
+</html>
